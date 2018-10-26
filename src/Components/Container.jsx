@@ -13,12 +13,13 @@ import {connect} from 'react-redux'
     return (
         <React.Fragment>
             <ToggleMe />
-            <div className="container">
+            {this.props.counters?<div className="container">
                     {this.props.counters.map((counter,i)=>{
                         return <Counter key={i} index={i}/>
                     })}
-                </div>
-                <div className='buttons'>
+            </div>:null}
+            
+             <div className='buttons'>
                 <button onClick={this.addCounter}>Add counter</button>
             </div>
 
@@ -26,7 +27,6 @@ import {connect} from 'react-redux'
     )
   }
 }
-
 
 const mapstateToProps = (state) => ({
     counters:state.counters

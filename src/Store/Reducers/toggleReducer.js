@@ -1,10 +1,9 @@
-
-const toggleReducer = (stateProperty = false, action) => {
+const toggleReducer = (toggle = false, action) => {
   switch (action.type) {
     case 'TOGGLE':
-      return !stateProperty
+      return !toggle
     default:
-      return stateProperty
+      return toggle
   }
 }
 

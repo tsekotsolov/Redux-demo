@@ -35,5 +35,6 @@ import {connect} from 'react-redux'
 const mapstateToProps = (state) => ({
     toggle:state.toggle,
   })
+
   
 export default connect(mapstateToProps)(TooggleMe)
